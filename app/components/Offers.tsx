@@ -2,7 +2,7 @@
 
 const Offers = () => {
   return (
-    <div>Offers</div>
+    <section>Offers</section>
   )
 }
 

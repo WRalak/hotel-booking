@@ -2,7 +2,7 @@
 
 const Sub = () => {
   return (
-    <div>Sub</div>
+    <section>Sub</section>
   )
 }
 

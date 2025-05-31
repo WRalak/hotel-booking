@@ -2,7 +2,7 @@
 
 const Featured = () => {
   return (
-    <div>Featured</div>
+    <section>Featured</section>
   )
 }
 

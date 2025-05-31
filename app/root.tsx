@@ -20,7 +20,14 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function meta() {
+  return [
+    { title: "Prime" },
+    { name: "description", content: "Welcome to Remix!" },
+  ];
+}
+
+export default function App() {
   return (
     <html lang="en" className="h-full">
       <head>
@@ -30,14 +37,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="h-full bg-white text-gray-900">
-        {/* Shared layout padding wrapper */}
-        <div className="">
-          <Navbar />
-          <main className="min-h-[calc(100vh-160px)]">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <Navbar />
+        <main className="min-h-[calc(100vh-160px)]">
+          <Outlet />
+        </main>
+        <Footer />
 
         <ScrollRestoration />
         <Scripts />
@@ -46,8 +50,4 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-
-export default function App() {
-  return <Outlet />;
-}
 
